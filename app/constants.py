@@ -5,7 +5,7 @@ import os
 import re
 
 APP_NAME = "剧集海报墙生成器"
-APP_VERSION = "1.0.0"
+APP_VERSION = "2026.11.16"
 
 VIDEO_EXTS = frozenset({
     ".mp4", ".m4v", ".mkv", ".avi", ".mov", ".wmv", ".flv", ".webm",
