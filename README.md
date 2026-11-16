@@ -10,8 +10,7 @@
 
 ## 1. 快速开始
 
-1. 解压后保留**整个** `VideoPosterWall` 目录，双击 `VideoPosterWall.exe`。
-   > 目录版 exe 依赖同目录下的 Qt 运行库，单独拷贝 `.exe` 无法运行。
+1. 安装 Python 3.13（64 位），执行 `python -m pip install -r requirements.txt`，再运行 `python launcher.py`。若使用目录版发布包，请保留完整程序目录及同目录依赖，不要只复制可执行文件。
 2. 点击 **选择文件夹…**，用 Windows 文件夹选择器选中视频专辑目录；**选择后会自动递归扫描所有子目录**。
 3. 在设置区设定 **季数**（默认 1 季）。
 4. 表格中每一季有一条**季标题行**，其下的子视频行有缩进。在「季」列给每个视频分组；用 **上移 / 下移** 调整同一季内的顺序——同季排第一的就是该季第 1 集。
@@ -144,7 +143,7 @@
 </episodedetails>
 ```
 
-`<title>` 始终是原始视频文件名；`<season>` / `<episode>` 来自界面上的季划分与季内排序。按 `test/` 中的三类样例，单集 NFO 还会写入 `original_filename`，并把本地可确定的编码、宽高、宽高比、分辨率和秒数写入 `fileinfo/streamdetails/video`；无法确定的字段不虚构，也不批量生成空节点。
+`<title>` 始终是原始视频文件名；`<season>` / `<episode>` 来自界面上的季划分与季内排序。单集 NFO 还会写入 `original_filename`，并把本地可确定的编码、宽高、宽高比、分辨率和秒数写入 `fileinfo/streamdetails/video`；无法确定的字段不虚构，也不批量生成空节点。
 
 **已有 NFO 采用合并更新**：演员、简介、评分、外部 ID、远程图片及其它刮削字段均保留，只更新本地可确定的字段。目标季目录已有 NFO 时优先合并它，否则合并视频原位置的 NFO。无法解析的 XML 会按本地信息重建，原始文件内容仍保存在当次运行的撤销记录中。
 
@@ -278,7 +277,7 @@ python launcher.py
 build_exe.bat
 ```
 
-打包产物为 `dist/VideoPosterWall/`，入口 `VideoPosterWall.exe`。`build_exe.py` 支持参数：
+打包采用 **onedir（目录版）**，分发时必须保留完整程序目录及同目录依赖，不要只复制可执行文件。`build_exe.py` 支持参数：
 
 ```bat
 python build_exe.py --clean
