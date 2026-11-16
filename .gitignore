@@ -1,0 +1,113 @@
+# ==========================================================================
+# Python
+# ==========================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+.python-version
+pip-wheel-metadata/
+
+# ==========================================================================
+# 打包产物（onedir 目录版 exe、PyInstaller 中间文件）
+# ==========================================================================
+build/
+dist/
+*.spec.bak
+*.manifest
+
+# ==========================================================================
+# IDE / 编辑器
+# ==========================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+*.sublime-workspace
+
+# ==========================================================================
+# 操作系统
+# ==========================================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# ==========================================================================
+# 本项目：临时文件、日志、本地测试数据
+# ==========================================================================
+tmp/
+temp/
+scratch/
+.pipcheck/
+__probe*/
+*.log
+*.tmp
+*.bak
+*.orig
+test/
+testdata/
+sample_media/
+samples/
+_test_album/
+
+# 媒体文件体积大且可能含隐私，不纳入版本控制；assets/ 中的应用图标例外
+*.mp4
+*.m4v
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.ts
+*.m2ts
+*.mpg
+*.mpeg
+*.rmvb
+*.rm
+*.vob
+*.3gp
+*.jpg
+*.jpeg
+*.jpe
+*.jfif
+*.png
+*.webp
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.tbn
+*.avif
+*.heic
+*.heif
+*.srt
+*.ass
+*.ssa
+*.nfo
+!assets/app.ico
+!assets/*.png
+
+AGENTS.md

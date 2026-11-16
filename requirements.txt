@@ -1,0 +1,2 @@
+# 运行时依赖（Python 3.13 / Windows 11）
+PySide6-Essentials==6.9.3

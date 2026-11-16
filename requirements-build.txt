@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# 打包工具：使用 onedir（目录版）模式
+pyinstaller==6.15.0
