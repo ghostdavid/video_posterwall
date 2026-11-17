@@ -16,7 +16,6 @@ python build_exe.py %*
 if errorlevel 1 goto :fail
 
 echo.
-echo 打包完成：dist\VideoPosterWall\VideoPosterWall.exe
 echo 分发时请复制整个 VideoPosterWall 目录。
 goto :eof
 
